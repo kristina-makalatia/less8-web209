@@ -1,0 +1,56 @@
+.wraper {
+  width: 400px;
+  height: 400px;
+  background-color: yellow;
+  position: relative;
+  /* transition-property: all;
+  transition-duration: 2s;
+  transition-timing-function: linear;
+  transition-delay: 3s; */
+
+  transition: all 2s linear 3s;
+}
+.box {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  /* transition-property: all;
+  transition-duration: 0.5s; */
+  transition: all 0.5s;
+}
+.wraper:hover {
+  background-color: blue;
+}
+.box:hover {
+  width: 200px;
+  background-color: lightblue;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+/* keyframe animation */
+.car-image {
+  width: 100px;
+  animation-name: carmove;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 2s;
+}
+
+@keyframes carmove {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(150%);
+  }
+}
+
+/* @keyframes carmove {
+  0% {}
+} */
